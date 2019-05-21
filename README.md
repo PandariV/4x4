@@ -1,6 +1,6 @@
 # finalProject
 
-# Project Title and purpose
+# 4x4 Rubik's Cube Simulator
 
 One Paragraph of project description goes here
 
@@ -41,6 +41,4 @@ This is the code that moves down the tree as decisions are made. It gets each va
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Fill in later

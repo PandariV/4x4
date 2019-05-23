@@ -1,5 +1,3 @@
-# finalProject
-
 # 4x4 Rubik's Cube Simulator
 
 One Paragraph of project description goes here

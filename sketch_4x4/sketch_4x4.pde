@@ -28,14 +28,14 @@ void setup() {
 
   CAM = new PeasyCam(this, 600);
   CAM.setResetOnDoubleClick(false);
-  CAM.setMinimumDistance(500);
-  CAM.setMaximumDistance(1000);
+  CAM.setMinimumDistance(700);
+  CAM.setMaximumDistance(700);
 
   buffer = createGraphics(width, height, P3D);
   BUFFERCAM = new PeasyCam(this, buffer, 600);
   BUFFERCAM.setResetOnDoubleClick(false);
-  BUFFERCAM.setMinimumDistance(500);
-  BUFFERCAM.setMaximumDistance(1000);
+  BUFFERCAM.setMinimumDistance(700);
+  BUFFERCAM.setMaximumDistance(700);
   
   cube = new Cube();
 }

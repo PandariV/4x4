@@ -1,7 +1,7 @@
 import peasy.*;
 
-PeasyCam CAM;
-PeasyCam BUFFERCAM;
+PeasyCam camera;
+PeasyCam buffercam;
 PGraphics buffer;
 
 float r = 25;
@@ -21,21 +21,20 @@ Cube cube;
 
 void setup() {
   size(600, 600, P3D);
-  strokeWeight(5);
   stroke(0);
 
   surface.setTitle("4x4 Simulator");
 
-  CAM = new PeasyCam(this, 600);
-  CAM.setResetOnDoubleClick(false);
-  CAM.setMinimumDistance(600);
-  CAM.setMaximumDistance(600);
+  camera = new PeasyCam(this, 600);
+  camera.setResetOnDoubleClick(false);
+  camera.setMinimumDistance(600);
+  camera.setMaximumDistance(600);
 
   buffer = createGraphics(width, height, P3D);
-  BUFFERCAM = new PeasyCam(this, buffer, 600);
-  BUFFERCAM.setResetOnDoubleClick(false);
-  BUFFERCAM.setMinimumDistance(600);
-  BUFFERCAM.setMaximumDistance(600);
+  buffercam = new PeasyCam(this, buffer, 600);
+  buffercam.setResetOnDoubleClick(false);
+  buffercam.setMinimumDistance(600);
+  buffercam.setMaximumDistance(600);
   
   cube = new Cube();
 }

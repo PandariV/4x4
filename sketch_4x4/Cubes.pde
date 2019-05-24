@@ -13,9 +13,9 @@ class Cube {
   }
   
   void display() {
-    for(int i = -2; i < 2; i++) {
-      for(int j = -2; j < 2; j++) {
-        for(int p = -2; p < 2; p++) {
+    for(int i = 0; i < pieces.length; i++) {
+      for(int j = 0; j < pieces[i].length; j++) {
+        for(int p = 0; p < pieces[i][j].length; p++) {
           pieces[i][j][p].display();
         }
       }

@@ -56,7 +56,7 @@ class PieceFace {
     else if (orientation == axes[5])
       fill(orange);
     stroke(0);
-    strokeWeight(5);
+    strokeWeight(7);
     
     translate(center.x, center.y, center.z);
     

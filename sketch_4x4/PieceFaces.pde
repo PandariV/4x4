@@ -3,9 +3,9 @@ class PieceFace {
   PVector orientation, center;
   PVector[] corners = new PVector[4];
   
-  PieceFace(PVector orientation_, PVector center_) {
-    orientation = orientation_;
-    center = center_;
+  PieceFace(PVector orientation, PVector center) {
+    this.orientation = orientation;
+    this.center = center;
     
     if(orientation == axes[2]) {
       corners[0] = new PVector(-r, -r, r);
@@ -53,7 +53,7 @@ class PieceFace {
       fill(green);
     else if (orientation == axes[4])
       fill(yellow);
-    else if (orientation == axes[5])
+    else
       fill(orange);
     stroke(0);
     strokeWeight(7);

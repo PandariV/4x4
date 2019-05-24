@@ -2,8 +2,8 @@ class Piece {
   PVector center;
   ArrayList<PieceFace> side = new ArrayList<PieceFace>();
   
-  Piece(PVector center_) {
-    center = center_;
+  Piece(PVector center) {
+    this.center = center;
     
     for(PVector p: axes) {
       PieceFace face = new PieceFace(p, new PVector(p.x, p.y, p.z));

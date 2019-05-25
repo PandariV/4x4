@@ -9,13 +9,8 @@ float r = 25;
 PVector center = new PVector(0, 0, 0);
 PVector[] axes = {new PVector(1, 0, 0), new PVector(0, 1, 0), new PVector(0, 0, 1), new PVector(-1, -0, -0), new PVector(0, -1, 0), new PVector(0, 0, -1)};
 
-int red = 0xff990000;
-int blue = 0xff3010ff;
-int white = 0xffffffff;
-int green = 0xff00ff00;
-int yellow = 0xffffff00;
-int orange = 0xffff9900;
-int black = 0xff000000;
+//red, blue, white, green, yellow, orange, black
+color[] colors = {#87000f, #0757bf, #ffffff, #30ff4b, #ffff11, #ff973d, #000000};
 
 Cube cube;
 

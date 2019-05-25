@@ -10,7 +10,7 @@ PVector center = new PVector(0, 0, 0);
 PVector[] axes = {new PVector(1, 0, 0), new PVector(0, 1, 0), new PVector(0, 0, 1), new PVector(-1, -0, -0), new PVector(0, -1, 0), new PVector(0, 0, -1)};
 
 int red = 0xff990000;
-int blue = 0xff3000ff;
+int blue = 0xff3010ff;
 int white = 0xffffffff;
 int green = 0xff00ff00;
 int yellow = 0xffffff00;

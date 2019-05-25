@@ -39,4 +39,4 @@ This is the code that moves down the tree as decisions are made. It gets each va
 
 ## Acknowledgments
 
-* Fill in later
+https://github.com/GregHilmes/RubiksCube - Provided base to adapt and change

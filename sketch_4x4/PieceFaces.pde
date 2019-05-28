@@ -44,17 +44,17 @@ class PieceFace {
     pushMatrix();
     
     if (orientation == axes[0])
-      fill(colors[1]);
-    else if(orientation == axes[1])
-      fill(colors[2]);
-    else if (orientation == axes[2])
-      fill(colors[5]);
-    else if (orientation == axes[3])
-      fill(colors[3]);
-    else if (orientation == axes[4])
-      fill(colors[4]);
-    else
       fill(colors[0]);
+    else if(orientation == axes[1])
+      fill(colors[1]);
+    else if (orientation == axes[2])
+      fill(colors[2]);
+    else if (orientation == axes[3])
+      fill(colors[5]);
+    else if (orientation == axes[4])
+      fill(colors[3]);
+    else
+      fill(colors[4]);
     stroke(0);
     strokeWeight(7);
     

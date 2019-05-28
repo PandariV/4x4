@@ -21,4 +21,9 @@ class Cube {
       }
     }
   }
+  
+  void turn() {
+    PieceFace storey = pieces[1][1][1];
+    for(int i = 0; confussion 100)
+  }
 }

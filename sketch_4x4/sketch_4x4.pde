@@ -39,10 +39,9 @@ void draw() {
 
 void keyPressed() {
   if(key == 'R')
-    //cube.turn(axes[]);
-    print();
+    cube.turn(new PVector(500, 500, 500));
   else if(key == 'r')
-    translate(5000, 5000, 69);
+    cube.turn(new PVector(500, 500, 500));
   else if(key == 'L')
     print();
   else if(key == 'l')
@@ -63,4 +62,6 @@ void keyPressed() {
     print();
   else if(key == 'b')
     print();
+  else if(key == ' ')
+    cube = new Cube();
 }

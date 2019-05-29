@@ -56,7 +56,7 @@ class PieceFace {
     else
       fill(colors[4]);
     stroke(0);
-    strokeWeight(7);
+    strokeWeight(6);
     
     translate(center.x, center.y, center.z);
     
@@ -71,5 +71,9 @@ class PieceFace {
     endShape(CLOSE);
     
     popMatrix();
+  }
+  
+  void setOrientation(PVector orientation) {
+    this.orientation = orientation;
   }
 }

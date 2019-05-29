@@ -22,8 +22,13 @@ class Cube {
     }
   }
   
-  void turn() {
-    PieceFace storey = pieces[1][1][1];
-    for(int i = 0; confussion 100)
+  void turn(PVector vector) {
+    for(int i = 0; i < pieces.length; i++) {
+      for(int j = 0; j < pieces[0].length; j++) {
+        for(int p = 0; p < pieces[0][0].length; p++) {
+          pieces[i][j][p].setOrientation(axes[(int) (random(0, 6))]);
+        }
+      }
+    }
   }
 }

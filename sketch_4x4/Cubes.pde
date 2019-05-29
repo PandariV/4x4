@@ -23,12 +23,12 @@ class Cube {
   }
   
   void turn(PVector vector) {
-    for(int i = 0; i < pieces.length; i++) {
-      for(int j = 0; j < pieces[0].length; j++) {
-        for(int p = 0; p < pieces[0][0].length; p++) {
-          pieces[i][j][p].setOrientation(axes[(int) (random(0, 6))]);
-        }
+    Piece temp = pieces[3][3][3];
+    for(int i = 0; i < pieces[0].length-1; i++) {
+      for(int j = 0; j < pieces[0][0].length-1; j++) {
+        pieces[0][i][j] = pieces[0][3][3];
       }
     }
+    pieces[0][3][3] = temp;
   }
 }

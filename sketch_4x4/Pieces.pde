@@ -21,10 +21,4 @@ class Piece {
     
     popMatrix();
   }
-  
-  void setOrientation(PVector p) {
-    for(int i = 0; i < side.size(); i++) {
-      side.get(i).setOrientation(p);
-    }
-  }
 }

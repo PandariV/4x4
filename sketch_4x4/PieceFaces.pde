@@ -72,8 +72,4 @@ class PieceFace {
     
     popMatrix();
   }
-  
-  void setOrientation(PVector orientation) {
-    this.orientation = orientation;
-  }
 }

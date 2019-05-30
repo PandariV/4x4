@@ -6,8 +6,7 @@ class Piece {
     this.center = center;
     
     for(PVector p: axes) {
-      PieceFace face = new PieceFace(p, new PVector(p.x, p.y, p.z));
-      side.add(face);
+      side.add(new PieceFace(p, new PVector(p.x, p.y, p.z)));
     }
   }
   
@@ -20,5 +19,10 @@ class Piece {
     }
     
     popMatrix();
+  }
+  
+  void setOrientation() {
+    for(int i = 0; i < side.size(); i++)
+      side.get(i).setOrientation();
   }
 }

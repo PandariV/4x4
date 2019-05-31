@@ -20,9 +20,4 @@ class Piece {
     
     popMatrix();
   }
-  
-  void setOrientation() {
-    for(int i = 0; i < side.size(); i++)
-      side.get(i).setOrientation();
-  }
 }

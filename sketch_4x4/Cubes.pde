@@ -21,9 +21,6 @@ class Cube {
     }
   }
   
-  //void turn(PVector vector) {
-    //for() {
-    //}
-    //pieces[3][2][2].setOrientation();
-  //}
+  void turn(PVector p, int direction) {
+  }
 }

@@ -73,10 +73,6 @@ class PieceFace {
     popMatrix();
   }
   
-  void setOrientation() {
-    orientation = axes[5];
-  }
-  
   void rotate(){
     pushMatrix();
     

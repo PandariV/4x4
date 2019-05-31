@@ -12,7 +12,7 @@ PVector[] axes = {new PVector(1, 0, 0), new PVector(0, 1, 0), new PVector(0, 0, 
 //red, blue, white, green, yellow, orange
 color[] colors = {#87000f, #0757bf, #ffffff, #30ff4b, #ffff11, #ff973d};
 
-Cube cube;
+Cube cube = new Cube();
 
 void setup() {
   size(600, 600, P3D);
@@ -22,32 +22,19 @@ void setup() {
   camera.setResetOnDoubleClick(false);
   camera.setMinimumDistance(600);
   camera.setMaximumDistance(600);
-
-  buffer = createGraphics(width, height, P3D);
-  buffercam = new PeasyCam(this, buffer, 600);
-  buffercam.setResetOnDoubleClick(false);
-  buffercam.setMinimumDistance(600);
-  buffercam.setMaximumDistance(600);
-  
-  cube = new Cube();
 }
 
 void draw() {
-   background(0);
-   cube.display();
+  background(0);
+  cube.display();
 }
 
-//void keyPressed() {
-  //if(key == ' ')
-    //cube = new Cube();
-//}
-
 void keyPressed() {
-    if(key == 'r') {
-      cube.pieces[3][0][3].side.get(0).rotate();
+  if(key == 'r') {
+    cube.turn(axes[0], -1);
       
-      //cube.pieces[3][2][2].setOrientation();
-    }
-    else if(key == ' ')
-      cube = new Cube();
+    //cube.pieces[3][2][2].setOrientation();
   }
+  else if(key == ' ')
+    cube = new Cube();
+}

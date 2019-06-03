@@ -1,5 +1,6 @@
 class Cube {
   Piece[][][] pieces = new Piece[4][4][4];
+  Piece[] temparr;
   
   Cube() {
     for(int i = -1; i < 3; i++) {
@@ -21,6 +22,34 @@ class Cube {
     }
   }
   
-  void turn(PVector p, int direction) {
+  void store() {
+    Piece[] temp = new Piece[4];
+    for(int i = 0; i < temp.length; i++)
+      temp[i] = pieces[3][0][i];
+    temparr = temp;
+  }
+  
+  void turn() {
+    
+    Piece[] temp = new Piece[4];
+    for(int i = 0; i < temp.length; i++)
+      temp[i] = pieces[3][0][i];
+    
+    pieces[3][0][0].change(4, pieces[3][0][3], 2);
+    pieces[3][0][1].change(4, pieces[3][1][3], 2);
+    pieces[3][0][2].change(4, pieces[3][2][3], 2);
+    pieces[3][0][3].change(4, pieces[3][3][3], 2);
+    pieces[3][0][3].change(2, pieces[3][3][3], 1);
+    pieces[3][1][3].change(2, pieces[3][3][2], 1);
+    pieces[3][2][3].change(2, pieces[3][3][1], 1);
+    pieces[3][3][3].change(2, pieces[3][3][0], 1);
+    pieces[3][3][3].change(1, pieces[3][3][0], 5);
+    pieces[3][3][2].change(1, pieces[3][2][0], 5);
+    pieces[3][3][1].change(1, pieces[3][1][0], 5);
+    pieces[3][3][0].change(1, pieces[3][0][0], 5);
+    pieces[3][3][0].change(5, temparr[0], 4);
+    //pieces[3][2][0].change(5, );
+    //pieces[3][1][0].change(5);
+    //pieces[3][0][0].change(5);
   }
 }

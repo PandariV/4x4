@@ -1,8 +1,5 @@
 import peasy.*;
-
 PeasyCam camera;
-PeasyCam buffercam;
-PGraphics buffer;
 
 float r = 25;
 
@@ -31,7 +28,8 @@ void draw() {
 
 void keyPressed() {
   if(key == 'r') {
-    cube.turn(axes[0], -1);
+    cube.store();
+    cube.turn();
       
     //cube.pieces[3][2][2].setOrientation();
   }

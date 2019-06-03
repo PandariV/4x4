@@ -20,4 +20,8 @@ class Piece {
     
     popMatrix();
   }
+  
+  void change(int sidechange, Piece p, int sideget) {
+    side.get(sidechange).change(p, sideget);
+  }
 }

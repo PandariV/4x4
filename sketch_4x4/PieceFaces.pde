@@ -73,36 +73,7 @@ class PieceFace {
     popMatrix();
   }
   
-  void rotate(){
-    pushMatrix();
-    
-    if (orientation == axes[0])
-      fill(colors[1]);
-    else if(orientation == axes[1])
-      fill(colors[2]);
-    else if (orientation == axes[2])
-      fill(colors[3]);
-    else if (orientation == axes[3])
-      fill(colors[0]);
-    else if (orientation == axes[4])
-      fill(colors[4]);
-    else
-      fill(colors[5]);
-    stroke(0);
-    strokeWeight(6);
-    
-    translate(center.x, center.y, center.z);
-    
-    beginShape();
-    PVector v;
-    
-    for(int i = 0; i <corners.length; i++) {
-      v = corners[i];
-      vertex(v.x, v.y, v.z);
-    }
-    
-    endShape(CLOSE);
-    
-    popMatrix();
+  void change(Piece p, int sideget){
+    orientation = p.side.get(sideget).orientation;
   }
 }

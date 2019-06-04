@@ -22,28 +22,28 @@ class Cube {
     }
   }
   
-  void turn() {
+  void turn(int thingy) {
     temp = new Piece[4];
     for(int i = 0; i < temp.length; i++) {
-      temp[i] = new Piece(pieces[3][0][i].center);
+      temp[i] = new Piece(pieces[thingy][0][i].center);
       for(int j = 0; j < temp[i].side.size(); j++)
-      temp[i].side.get(j).orientation = pieces[3][0][i].side.get(j).orientation;
+      temp[i].side.get(j).orientation = pieces[thingy][0][i].side.get(j).orientation;
     }
-    pieces[3][0][0].change(4, pieces[3][0][3], 2);
-    pieces[3][0][1].change(4, pieces[3][1][3], 2);
-    pieces[3][0][2].change(4, pieces[3][2][3], 2);
-    pieces[3][0][3].change(4, pieces[3][3][3], 2);
-    pieces[3][0][3].change(2, pieces[3][3][3], 1);
-    pieces[3][1][3].change(2, pieces[3][3][2], 1);
-    pieces[3][2][3].change(2, pieces[3][3][1], 1);
-    pieces[3][3][3].change(2, pieces[3][3][0], 1);
-    pieces[3][3][3].change(1, pieces[3][3][0], 5);
-    pieces[3][3][2].change(1, pieces[3][2][0], 5);
-    pieces[3][3][1].change(1, pieces[3][1][0], 5);
-    pieces[3][3][0].change(1, pieces[3][0][0], 5);
-    pieces[3][3][0].change(5, temp[0], 4);
-    pieces[3][2][0].change(5, temp[1], 4);
-    pieces[3][1][0].change(5, temp[2], 4);
-    pieces[3][0][0].change(5, temp[3], 4);
+    pieces[thingy][0][0].change(4, pieces[thingy][0][3], 2);
+    pieces[thingy][0][1].change(4, pieces[thingy][1][3], 2);
+    pieces[thingy][0][2].change(4, pieces[thingy][2][3], 2);
+    pieces[thingy][0][3].change(4, pieces[thingy][3][3], 2);
+    pieces[thingy][0][3].change(2, pieces[thingy][3][3], 1);
+    pieces[thingy][1][3].change(2, pieces[thingy][3][2], 1);
+    pieces[thingy][2][3].change(2, pieces[thingy][3][1], 1);
+    pieces[thingy][3][3].change(2, pieces[thingy][3][0], 1);
+    pieces[thingy][3][3].change(1, pieces[thingy][3][0], 5);
+    pieces[thingy][3][2].change(1, pieces[thingy][2][0], 5);
+    pieces[thingy][3][1].change(1, pieces[thingy][1][0], 5);
+    pieces[thingy][3][0].change(1, pieces[thingy][0][0], 5);
+    pieces[thingy][3][0].change(5, temp[0], 4);
+    pieces[thingy][2][0].change(5, temp[1], 4);
+    pieces[thingy][1][0].change(5, temp[2], 4);
+    pieces[thingy][0][0].change(5, temp[3], 4);
   }
 }

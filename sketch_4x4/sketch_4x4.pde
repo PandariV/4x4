@@ -28,7 +28,6 @@ void draw() {
 
 void keyPressed() {
   if(key == 'r') {
-    cube.store();
     cube.turn();
       
     //cube.pieces[3][2][2].setOrientation();

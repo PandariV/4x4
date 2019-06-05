@@ -26,14 +26,18 @@ class Cube {
   // uggghh, this was the hardest part to code, my function is insanely ineffecient, but it works
   void turn(int thingy, String str) { //takes two inputs, thingy is the index and str identifies x, y, or z axis of rotation
     if(str.equals("y")) {
-      
       //changes the side pieces by swapping them with corresponding face
+      
+      //creates a temp copy of a side
       temp = new Piece[4];
       for(int i = 0; i < temp.length; i++) {
         temp[i] = new Piece(pieces[thingy][0][i].center);
-        for(int j = 0; j < temp[i].side.size(); j++)
-        temp[i].side.get(j).orientation = pieces[thingy][0][i].side.get(j).orientation;
+        for(int j = 0; j < temp[i].side.size(); j++) {
+          temp[i].side.get(j).orientation = pieces[thingy][0][i].side.get(j).orientation;
+        }
       }
+      
+      //translates every individual piece face
       pieces[thingy][0][0].change(4, pieces[thingy][0][3], 2);
       pieces[thingy][0][1].change(4, pieces[thingy][1][3], 2);
       pieces[thingy][0][2].change(4, pieces[thingy][2][3], 2);
@@ -52,7 +56,7 @@ class Cube {
       pieces[thingy][0][0].change(5, temp[3], 4);
       
       //changes the top pieces
-      //outer
+      //outer translation fo piece faces
       pieces[thingy][0][0].change(0, pieces[thingy][0][3], 0);
       pieces[thingy][0][1].change(0, pieces[thingy][1][3], 0);
       pieces[thingy][0][2].change(0, pieces[thingy][2][3], 0);
@@ -70,6 +74,7 @@ class Cube {
       pieces[thingy][1][0].change(0, temp[2], 0);
       pieces[thingy][0][0].change(0, temp[3], 0);
       //inner
+      //creates a temp copy of all the inner faces
       int counter = 0;
       temp2 = new Piece[4];
       for(int i = 1; i <= 2; i++) {
@@ -81,6 +86,7 @@ class Cube {
           counter++;
         }
       }
+      //translates the inner faces
       pieces[thingy][1][1].change(0, temp2[1], 0);
       pieces[thingy][1][2].change(0, temp2[3], 0);
       pieces[thingy][2][2].change(0, temp2[2], 0);

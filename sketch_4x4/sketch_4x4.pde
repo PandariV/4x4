@@ -35,6 +35,14 @@ void keyPressed() {
     cube.turn(1, "y");
   } else if(key == 'l') {
     cube.turn(0, "y");
+  } else if(key == 'd') {
+    cube.turn(3, "x");
+  } else if(key == 'D') {
+    cube.turn(2, "x");
+  } else if(key == 'U') {
+    cube.turn(1, "x");
+  } else if(key == 'u') {
+    cube.turn(0, "x");
   } else if(key == ' ') {
     cube = new Cube();
   }

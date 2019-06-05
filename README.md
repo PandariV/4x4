@@ -4,10 +4,15 @@ This is a 3D simulation of a 4x4 Rubik's Cube. The implementation of the peasy c
 
 Contorls:
 r - right side clockwise
+
 l - left clockwise
+
 u - up clockwise
+
 d - down clockwise
+
 f - front clockwise
+
 b - back clockwise
 
 SHIFT + any of the listed keys - turns the middle layer of that axis

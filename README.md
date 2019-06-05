@@ -2,19 +2,19 @@
 
 This is a 3D simulation of a 4x4 Rubik's Cube. The implementation of the peasy cam allows the perspective to be rotated to view the cube at different angles. It can turn in any direction, though, I was unable to create turn animations due to the complexity of rotating PVectors. The turn function simply shifts the contents (the colors) of each piece onto the target piece. There are 3 functions for horizontal turns, vertical turns, and z-axis turns.
 
-Contorls:
+Controls:
 
 r - right side clockwise
 
-l - left clockwise
+l - left side counter-clockwise
 
-u - up clockwise
+u - up side clockwise
 
-d - down clockwise
+d - down side counter-clockwise
 
-f - front clockwise
+f - front side clockwise
 
-b - back clockwise
+b - back side counter-clockwise
 
 SHIFT + any of the listed keys - turns the middle layer of that axis
 

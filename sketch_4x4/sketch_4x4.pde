@@ -28,17 +28,14 @@ void draw() {
 
 void keyPressed() {
   if(key == 'r') {
-    cube.turn(3);
-  }
-  else if(key == 'R') {
-    cube.turn(2);
-  }
-  else if(key == 'L') {
-    cube.turn(1);
-  }
-  else if(key == 'l') {
-    cube.turn(0);
-  }
-  else if(key == ' ')
+    cube.turn(3, "y");
+  } else if(key == 'R') {
+    cube.turn(2, "y");
+  } else if(key == 'L') {
+    cube.turn(1, "y");
+  } else if(key == 'l') {
+    cube.turn(0, "y");
+  } else if(key == ' ') {
     cube = new Cube();
+  }
 }

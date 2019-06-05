@@ -10,7 +10,6 @@ class Cube {
         }
       }
     }
-    //pieces[0][3][0 ].side.get(1).orientation = axes[5];
   }
   
   void display() {
@@ -155,7 +154,70 @@ class Cube {
         pieces[2][thingy][2].change(disdumb, temp2[2], disdumb); 
       }
     } else {
-      //inser z-axis turn code
+      temp = new Piece[4];
+      for(int i = 0; i < temp.length; i++) {
+        temp[i] = new Piece(pieces[i][0][thingy].center);
+        for(int j = 0; j < temp[i].side.size(); j++) {
+          temp[i].side.get(j).orientation = pieces[i][0][thingy].side.get(j).orientation;
+        }
+      }
+      
+      //translates every individual piece face
+      pieces[3][0][thingy].change(4, pieces[0][0][thingy], 3);
+      pieces[2][0][thingy].change(4, pieces[0][1][thingy], 3);
+      pieces[1][0][thingy].change(4, pieces[0][2][thingy], 3);
+      pieces[0][0][thingy].change(4, pieces[0][3][thingy], 3);
+      pieces[0][0][thingy].change(3, pieces[0][3][thingy], 1);
+      pieces[0][1][thingy].change(3, pieces[1][3][thingy], 1);
+      pieces[0][2][thingy].change(3, pieces[2][3][thingy], 1);
+      pieces[0][3][thingy].change(3, pieces[3][3][thingy], 1);
+      pieces[0][3][thingy].change(1, pieces[3][3][thingy], 0);
+      pieces[1][3][thingy].change(1, pieces[3][2][thingy], 0);
+      pieces[2][3][thingy].change(1, pieces[3][1][thingy], 0);
+      pieces[3][3][thingy].change(1, pieces[3][0][thingy], 0);
+      pieces[3][3][thingy].change(0, temp[3], 4);
+      pieces[3][2][thingy].change(0, temp[2], 4);
+      pieces[3][1][thingy].change(0, temp[1], 4);
+      pieces[3][0][thingy].change(0, temp[0], 4);
+      
+      //changes the top pieces
+      //outer translation fo piece faces
+      for(int disdumb = 2; disdumb <= 5; disdumb += 3) {
+        pieces[3][0][thingy].change(disdumb, pieces[0][0][thingy], disdumb);
+        pieces[2][0][thingy].change(disdumb, pieces[0][1][thingy], disdumb);
+        pieces[1][0][thingy].change(disdumb, pieces[0][2][thingy], disdumb);
+        pieces[0][0][thingy].change(disdumb, pieces[0][3][thingy], disdumb);
+        pieces[0][0][thingy].change(disdumb, pieces[0][3][thingy], disdumb);
+        pieces[0][1][thingy].change(disdumb, pieces[1][3][thingy], disdumb);
+        pieces[0][2][thingy].change(disdumb, pieces[2][3][thingy], disdumb);
+        pieces[0][3][thingy].change(disdumb, pieces[3][3][thingy], disdumb);
+        pieces[0][3][thingy].change(disdumb, pieces[3][3][thingy], disdumb);
+        pieces[1][3][thingy].change(disdumb, pieces[3][2][thingy], disdumb);
+        pieces[2][3][thingy].change(disdumb, pieces[3][1][thingy], disdumb);
+        pieces[3][3][thingy].change(disdumb, pieces[3][0][thingy], disdumb);
+        pieces[3][3][thingy].change(disdumb, temp[3], disdumb);
+        pieces[3][2][thingy].change(disdumb, temp[2], disdumb);
+        pieces[3][1][thingy].change(disdumb, temp[1], disdumb);
+        pieces[3][0][thingy].change(disdumb, temp[0], disdumb);
+        //inner
+        //creates a temp copy of all the inner faces
+        int counter = 0;
+        temp2 = new Piece[4];
+        for(int i = 1; i <= 2; i++) {
+          for(int j = 1; j <= 2; j++) {
+            temp2[counter] = new Piece(pieces[j][i][thingy].center);
+            for(int p = 0; p < temp2[counter].side.size(); p++) {
+              temp2[counter].side.get(p).orientation = pieces[j][i][thingy].side.get(p).orientation;
+            }
+            counter++;
+          }
+        }
+        //translates the inner faces
+        pieces[2][1][thingy].change(disdumb, temp2[0], disdumb);
+        pieces[1][1][thingy].change(disdumb, temp2[2], disdumb);
+        pieces[1][2][thingy].change(disdumb, temp2[3], disdumb);
+        pieces[2][2][thingy].change(disdumb, temp2[1], disdumb); 
+      }
     }
   }
 }

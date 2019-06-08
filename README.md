@@ -1,6 +1,6 @@
 # 4x4 Rubik's Cube Simulator
 
-This is a 3D simulation of a 4x4 Rubik's Cube. The implementation of the peasy cam allows the perspective to be rotated to view the cube at different angles. It can turn in any direction, though, I was unable to create turn animations due to the complexity of rotating PVectors. The turn function simply shifts the contents (the colors) of each piece onto the target piece. There are 3 functions for horizontal turns, vertical turns, and z-axis turns.
+This is a 3D simulation of a 4x4 Rubik's Cube. The implementation of the peasy cam allows the perspective to be rotated to view the cube at different angles. It can turn in any direction, though, I was unable to create turn animations due to the complexity of rotating PVectors. The turn function simply shifts the contents (the colors) of each piece onto the target piece. There are 3 functions for horizontal turns, vertical turns, and z-axis turns. Also, the peasy cam library must be downloaded for the program to properly run.
 
 Controls:
 
